@@ -1,0 +1,35 @@
+/* Custom styles for n8n chat */
+
+/* This targets the container you've added */
+
+/* The component has a custom icon wrapper. Let's style that. */
+.chat-button-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 72px; /* Adjust size as needed */
+  height: 72px; /* Adjust size as needed */
+  background-color: #1a73e8; /* Example color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  pointer-events: none; /* As in the original code */
+}
+
+/* Overriding n8n's default button if our custom one is just a visual layer */
+[data-n8n-chat-button] {
+  /* Make n8n's button transparent but still clickable */
+  opacity: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Style for the custom icon inside the wrapper */
+.chat-button-wrapper svg {
+  width: 60%;
+  height: 60%;
+  color: white;
+}
